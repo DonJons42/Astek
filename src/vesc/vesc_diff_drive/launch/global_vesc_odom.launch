@@ -1,0 +1,24 @@
+<!-- -*- mode: XML -*- -->
+<launch>
+
+  <!-- Launch the vesc_diff_drive to estimate odometry for robolocalization-->
+  <include file="$(find vesc_diff_drive)/launch/vesc_diff_drive.launch"/>
+
+  <!-- Launch the VESC driver for the left and right motors-->
+  <include file="$(find vesc_driver)/launch/vesc_driver_node.launch"/>
+
+
+  <!-- Launch the cmd_pub -->
+  <include file="$(find cmd_pub)/launch/cmd_pub.launch"/>
+ 
+
+</launch>
+
+
+
+
+
+
+
+
+
